@@ -100,7 +100,7 @@ In this app, users can view different posts made by other users. These posts inc
 
 ## Wireframes
 
-<img src="wireframes.jpg" width=600>
+<img src="Wireframes.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
