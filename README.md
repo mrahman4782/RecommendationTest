@@ -116,6 +116,16 @@ In this app, users can view different posts made by other users. These posts inc
 <img src="models/profile.png" width=600>
 <img src="models/user.png" width=600>
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+* Profile Screen
+   * （Read/GET) Query all the columns inside Profile model with the logged in username
+   * (Update/PUT) update user's information
+   * (Delete) delete posts that are posted by this user.
+* Home Screen
+    * (Read/GET) Query all the columns inside the Post model
+    * (Create/POST) Create a new post
+    * (Update/PUT) user can choose to like or dislike a specific post
+    * (Create/POST) user can comment under a post
+* Diary Screen
+    * (Read/GET) Qury all the columns inside the diary model
+    * (Create/POST) user can add a new diary.
+    * (Delete) user can choose to delete a diary 
