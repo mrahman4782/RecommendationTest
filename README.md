@@ -9,7 +9,7 @@
 
 ## Overview
 ### Description
-In this app, users can view different posts made by other users. These posts include description and images for the places that other people recommended.
+In this app, users can view different posts made by other users. These posts include description and images for the places that they recommended.
 
 
 
@@ -62,6 +62,7 @@ In this app, users can view different posts made by other users. These posts inc
 
 * Diary Screen
     * Users can write their diary.
+    
 * Detail Screen
     * Users can view the details of the recommandations.
 * Profile Screen
@@ -99,22 +100,22 @@ In this app, users can view different posts made by other users. These posts inc
 
 
 ## Wireframes
-
+[Add picture of your hand sketched wireframes in this section]
 <img src="Wireframes.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
 ### [BONUS] Interactive Prototype
 
-## Schema
-
-
+## Schema 
+[This section will be completed in Unit 9]
 ### Models
 <img src="models/comment.png" width=600>
 <img src="models/diary.png" width=600>
 <img src="models/post.png" width=600>
 <img src="models/profile.png" width=600>
 <img src="models/user.png" width=600>
+
 ### Networking
 * Profile Screen
    * （Read/GET) Query all the columns inside Profile model with the logged in username
@@ -129,3 +130,5 @@ In this app, users can view different posts made by other users. These posts inc
     * (Read/GET) Qury all the columns inside the diary model
     * (Create/POST) user can add a new diary.
     * (Delete) user can choose to delete a diary 
+- [Create basic snippets for each Parse network request]
+- [OPTIONAL: List endpoints if using existing API such as Yelp]
