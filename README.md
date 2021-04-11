@@ -106,10 +106,15 @@ In this app, users can view different posts made by other users. These posts inc
 
 ### [BONUS] Interactive Prototype
 
-## Schema 
-[This section will be completed in Unit 9]
+## Schema
+
+
 ### Models
-[Add table of models]
+<img src="models/comment.png" width=600>
+<img src="models/diary.png" width=600>
+<img src="models/post.png" width=600>
+<img src="models/profile.png" width=600>
+<img src="models/user.png" width=600>
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
