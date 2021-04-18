@@ -1,4 +1,4 @@
-package com.example.place_recommendation;
+package com.example.recommendationapp;
 
 import org.junit.Test;
 

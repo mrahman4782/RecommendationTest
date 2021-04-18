@@ -1,4 +1,4 @@
-package com.example.place_recommendation;
+package com.example.recommendationapp;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.place_recommendation", appContext.getPackageName());
+        assertEquals("com.example.recommendationapp", appContext.getPackageName());
     }
 }
