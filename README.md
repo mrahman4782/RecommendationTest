@@ -27,11 +27,11 @@ In this app, users can view different posts made by other users. These posts inc
 
 **Required Must-have Stories**
 
-- [ ] Users can sign up for an account.
+- [x] Users can sign up for an account.
 - [ ] Users can login/log out of their account.
 - [ ] Users can view the recommendations from different users
 - [ ] Users can tap on the picture to display the details.
-- [ ] Users can add a recommendation, including images,descriptions and the tag.
+- [x] Users can add a recommendation, including images,descriptions and the tag.
 - [ ] Users can filter the recommendations based on the tag that each recommendation have.
 - [ ] Users can view their profile and see the posts that they made
 - [ ] Users can type in keywords on the search bar to filter the recommendations
