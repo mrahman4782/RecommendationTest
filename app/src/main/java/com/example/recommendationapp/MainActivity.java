@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
     private Button btnCaptureImage;
     private ImageView ivPostImage;
     private Button btnSubmit;
+
+    private EditText etCategory;
     private File photoFile;
 
 
@@ -51,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         etDescription = findViewById(R.id.etDescription);
         btnCaptureImage = findViewById(R.id.btnCaptureImage);
         ivPostImage = findViewById(R.id.ivPostImage);
+        etCategory = findViewById(R.id.etCategory);
         btnSubmit = findViewById(R.id.btnSubmit);
 
         btnCaptureImage.setOnClickListener(new View.OnClickListener() {
@@ -67,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 String description = etDescription.getText().toString();
+                String category = etCategory.getText().toString();
+
                 if(description.isEmpty()){
                     Toast.makeText(MainActivity.this,"You need to have a desc",Toast.LENGTH_SHORT).show();
                     return;
@@ -77,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
                 ParseUser currentUser = ParseUser.getCurrentUser();
-                savePost(description,currentUser,photoFile);
+                savePost(description,currentUser,photoFile,category);
 
             }
         });
@@ -140,11 +145,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void savePost(String description, ParseUser currentUser, File photoFile) {
+    private void savePost(String description, ParseUser currentUser, File photoFile, String category) {
         Post post = new Post();
         post.setDescription(description);
         post.setUser(currentUser);
         post.setImage(new ParseFile(photoFile));
+        post.setCategory(category);
 
         post.saveInBackground(new SaveCallback() {
             @Override
@@ -157,6 +163,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.i(TAG, "post save is good");
                 etDescription.setText(" ");
                 ivPostImage.setImageResource(0);
+                etCategory.setText(" ");
             }
         });
     }
