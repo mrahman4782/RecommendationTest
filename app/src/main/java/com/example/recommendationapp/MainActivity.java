@@ -1,8 +1,11 @@
 package com.example.recommendationapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
+import androidx.fragment.app.Fragment;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -11,12 +14,14 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseFile;
@@ -35,15 +40,11 @@ public class MainActivity extends AppCompatActivity {
     private Button btnCaptureImage;
     private ImageView ivPostImage;
     private Button btnSubmit;
-
     private EditText etCategory;
     private File photoFile;
-
-
     public String photoFileName = "photo.jpg";
-
     public static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE =42;
-
+    private BottomNavigationView bottomNavigationView ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         ivPostImage = findViewById(R.id.ivPostImage);
         etCategory = findViewById(R.id.etCategory);
         btnSubmit = findViewById(R.id.btnSubmit);
+        bottomNavigationView = findViewById(R.id.bottom_navigation) ;
 
         btnCaptureImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,6 +86,33 @@ public class MainActivity extends AppCompatActivity {
                 ParseUser currentUser = ParseUser.getCurrentUser();
                 savePost(description,currentUser,photoFile,category);
 
+            }
+        });
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @SuppressLint("NonConstantResourceId")
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Fragment fragment;
+                switch (item.getItemId()) {
+                    case R.id.action_diary:
+                        Toast.makeText(MainActivity.this,"diary", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.action_postdiary:
+                        Toast.makeText(MainActivity.this,"post diary", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.action_Profile:
+                        Toast.makeText(MainActivity.this,"profile", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.action_home:
+                        Toast.makeText(MainActivity.this,"home", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.action_compose:
+                    default:
+                        Toast.makeText(MainActivity.this,"compose", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+                return true;
             }
         });
 
