@@ -23,6 +23,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.recommendationapp.fragments.ComposeFragment;
+import com.example.recommendationapp.fragments.PostsFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -70,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.action_home:
                         Toast.makeText(MainActivity.this,"home", Toast.LENGTH_SHORT).show();
-                        fragment = new ComposeFragment() ;
+                        fragment = new PostsFragment() ;
                         break;
                     case R.id.action_compose:
                     default:
@@ -83,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        bottomNavigationView.setSelectedItemId(R.id.action_home);
+        bottomNavigationView.setSelectedItemId(R.id.action_compose);
     }
 
 }
