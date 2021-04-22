@@ -48,6 +48,7 @@ public class ComposeFragment extends Fragment {
     public String photoFileName = "photo.jpg";
     public static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE =42;
     public static final String TAG = "ComposeFragment";
+    private Button btnLogOut ;
 
 
 
@@ -71,6 +72,7 @@ public class ComposeFragment extends Fragment {
         ivPostImage = view.findViewById(R.id.ivPostImage);
         etCategory = view.findViewById(R.id.etCategory);
         btnSubmit = view.findViewById(R.id.btnSubmit);
+        btnLogOut = view.findViewById(R.id.btnLogOut) ;
 
 
         btnCaptureImage.setOnClickListener(new View.OnClickListener() {
@@ -103,6 +105,21 @@ public class ComposeFragment extends Fragment {
 
             }
         });
+
+        btnLogOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ParseUser.logOut();
+                ParseUser currentUser = ParseUser.getCurrentUser(); // this will now be null
+
+
+               Post post = new Post();
+               post.setUser(currentUser);
+
+            }
+        });
+
+
     }
 
     private void launchCamera(){
