@@ -11,6 +11,7 @@ public class ParseApplication extends Application {
         super.onCreate();
 
         ParseObject.registerSubclass(Post.class);
+        ParseObject.registerSubclass(Diary.class);
 
 
         Parse.initialize(new Parse.Configuration.Builder(this)
