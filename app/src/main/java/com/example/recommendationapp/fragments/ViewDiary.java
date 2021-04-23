@@ -48,8 +48,8 @@ public class ViewDiary extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         rvDiary = view.findViewById(R.id.rvDiary);
-        allPosts = new ArrayList<>();
 
+        allPosts = new ArrayList<>();
         adapter = new DiaryAdapter(getContext(),allPosts);
 
         rvDiary.setAdapter(adapter);
@@ -60,7 +60,7 @@ public class ViewDiary extends Fragment {
 
     protected void queryPosts() {
         ParseQuery<Diary> query = ParseQuery.getQuery(Diary.class);
-        query.include(Diary.KEY_USER);
+        query.include(Diary.KEY_CONTENT);
         query.whereEqualTo(Diary.KEY_USER, ParseUser.getCurrentUser());
         query.addDescendingOrder(Diary.KEY_CREATED_KEY);
 
