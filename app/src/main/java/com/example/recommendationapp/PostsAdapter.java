@@ -51,27 +51,31 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
         private TextView tvUsername ;
         private TextView tvDescription ;
         private  TextView tvCategory ;
-       // private  TextView tvTime ;
-        //private  TextView tvLike_number ;
+        private  TextView tvTime ;
+        private  TextView tvLike_number ;
         private ImageView ivImage ;
-       // private ImageButton bt_like ;
+        private ImageButton bt_like ;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvUsername = itemView.findViewById(R.id.tvUsername);
             tvCategory = itemView.findViewById(R.id.tvCategory);
             tvDescription = itemView.findViewById(R.id.tvDescription);
-          //  tvTime = itemView.findViewById(R.id.tvTime) ;
-          //  tvLike_number = itemView.findViewById(R.id.tvLike_number) ;
+            tvTime = itemView.findViewById(R.id.tvTime) ;
+            tvLike_number = itemView.findViewById(R.id.tvLike_number) ;
             ivImage = itemView.findViewById(R.id.ivImage)  ;
 
-          //  bt_like = itemView.findViewById(R.id.bt_like) ;
+            bt_like = itemView.findViewById(R.id.bt_like) ;
         }
 
         public void bind(Post post) {
             tvDescription.setText(post.getDescription());
             tvUsername.setText(post.getUser().getUsername());
             tvCategory.setText(post.getCategory());
+            tvLike_number.setText(post.getLike().toString());
+
+            tvTime.setText(post.getFormattedTimestamp());
+
             ParseFile image = post.getImage();
             if(image != null){
 
