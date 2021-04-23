@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.recommendationapp.Post;
 import com.example.recommendationapp.PostsAdapter;
@@ -31,6 +32,8 @@ public class PostsFragment extends Fragment {
     protected PostsAdapter adapter ;
     protected  List<Post> allPosts ;
 
+    private Button bt_like;
+
 
     public PostsFragment() {
         // Required empty public constructor
@@ -48,14 +51,21 @@ public class PostsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
         rvPosts = view.findViewById(R.id.rvPosts) ;
+
+
+
 
         allPosts = new ArrayList<>( );
         adapter = new PostsAdapter(getContext(), allPosts) ;
 
+
         rvPosts.setAdapter(adapter);
         rvPosts.setLayoutManager(new LinearLayoutManager(getContext()));
         queryPosts();
+
+
     }
 
     protected void queryPosts() {
