@@ -51,6 +51,14 @@ In this app, users can view different posts made by other users. These posts inc
 - [ ] Users are able to message their friends
 
 
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+<br>
+<b>Week 1</b>
+
+<img src='sprint1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 ### 2. Screen Archetypes
 
 * Login Screen
