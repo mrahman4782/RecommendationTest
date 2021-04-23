@@ -9,6 +9,7 @@ public class Diary extends ParseObject {
 
     public static final String KEY_CONTENT = "content";
     public static final String KEY_USER = "author";
+    public static final String KEY_CREATED_KEY = "createdAt";
 
     public String getContent(){
         return getString(KEY_CONTENT);

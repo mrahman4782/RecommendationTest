@@ -26,6 +26,7 @@ import com.example.recommendationapp.fragments.ComposeFragment;
 import com.example.recommendationapp.fragments.DiaryFragment;
 import com.example.recommendationapp.fragments.PostsFragment;
 import com.example.recommendationapp.fragments.ProfileFragment;
+import com.example.recommendationapp.fragments.ViewDiary;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -61,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case R.id.action_diary:
                         Toast.makeText(MainActivity.this,"diary", Toast.LENGTH_SHORT).show();
-                        fragment = new ComposeFragment() ;
+                        fragment = new ViewDiary() ;
                         break;
                     case R.id.action_postdiary:
                         Toast.makeText(MainActivity.this,"post diary", Toast.LENGTH_SHORT).show();
