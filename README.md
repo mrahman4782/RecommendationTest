@@ -30,7 +30,6 @@ In this app, users can view different posts made by other users. These posts inc
 - [x] Users can sign up for an account.
 - [x] Users can login/log out of their account.
 - [x] Users can view the recommendations from different users
-- [ ] Users can tap on the picture to display the descriptions and zoom the image.
 - [x] Users can add a recommendation, including images,descriptions and the tag.
 - [ ] Users can filter the recommendations based on the tag that each recommendation have.
 - [x] Users can view their profile and see the posts that they made
@@ -46,6 +45,7 @@ In this app, users can view different posts made by other users. These posts inc
 **Optional Nice-to-have Stories**
 
 - [ ] Users can report innappropriate posts
+- [ ] Users can tap on the picture to display the descriptions and zoom the image.
 - [ ] Users can upvote and downvote recommendations
 - [ ] Users can have a freindlist.
 - [ ] Users are able to add a new friend
