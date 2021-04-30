@@ -60,6 +60,12 @@ Here's a walkthrough of implemented user stories:
 
 <img src='sprint1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+<br>
+<b>Week 2</b>
+
+<img src='sprint2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+
 ### 2. Screen Archetypes
 
 * Login Screen
