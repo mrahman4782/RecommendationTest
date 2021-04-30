@@ -56,14 +56,16 @@ In this app, users can view different posts made by other users. These posts inc
 
 Here's a walkthrough of implemented user stories:
 <br>
+<b>Week 2</b>
+
+<img src='sprint2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+<br>
 <b>Week 1</b>
 
 <img src='sprint1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-<br>
-<b>Week 2</b>
 
-<img src='sprint2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 ### 2. Screen Archetypes
