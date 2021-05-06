@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private BottomNavigationView bottomNavigationView ;
+
     final FragmentManager fragmentManager = getSupportFragmentManager() ;
 
     @Override

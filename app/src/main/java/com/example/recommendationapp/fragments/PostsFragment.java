@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -31,7 +32,7 @@ public class PostsFragment extends Fragment {
     public static final String TAG = "Posts";
     protected PostsAdapter adapter ;
     protected  List<Post> allPosts ;
-
+    SwipeRefreshLayout swipeContainer;
     private Button bt_like;
 
 
@@ -59,6 +60,14 @@ public class PostsFragment extends Fragment {
 
         allPosts = new ArrayList<>( );
         adapter = new PostsAdapter(getContext(), allPosts) ;
+        swipeContainer = view.findViewById(R.id.swipecontainer);
+        swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                Log.i(TAG,"fetching new data!");
+                queryPosts();
+            }
+        });
 
 
         rvPosts.setAdapter(adapter);
@@ -86,8 +95,10 @@ public class PostsFragment extends Fragment {
                 for(Post post: posts){
                     Log.i(TAG, "posts: " + post.getDescription());
                 }
+                allPosts.clear();
                 allPosts.addAll(posts);
                 adapter.notifyDataSetChanged();
+                swipeContainer.setRefreshing(false);
             }
         });
     }
