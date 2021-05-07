@@ -33,10 +33,9 @@ In this app, users can view different posts made by other users. These posts inc
 - [x] Users can add a recommendation, including images,descriptions and the tag.
 - [ ] Users can filter the recommendations based on the tag that each recommendation have.
 - [x] Users can view their profile and see the posts that they made
-- [ ] Users can type in keywords on the search bar to filter the recommendations
-- [ ] Users are able to write a diary.
+- [x] Users are able to write a diary.
 - [x] Users can choose between different tabs including post,write a diary, search, and profile.
-- [ ] User can pull to refresh.
+- [x] User can pull to refresh.
 - [ ] Users can comment under other people's posts
 - [ ] Users can view other people's comment
 - [x] Posts are sorted
