@@ -53,6 +53,10 @@ In this app, users can view different posts made by other users. These posts inc
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
+
+<br>
+<b>Week 4 </b>
+<img src='sprint4.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 <br>
 <b>Week 3 </b>
 <img src='sprint3.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
