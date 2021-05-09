@@ -38,6 +38,7 @@ In this app, users can view different posts made by other users. These posts inc
 - [x] Posts are sorted
 - [x] Users can like recommendations
 - [x] Users can tap on the picture to display the descriptions.
+- [ ] Users can visit recommended places.
 
 
 **Optional Nice-to-have Stories**
