@@ -7,12 +7,15 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.parse.ParseException;
 import com.parse.ParseFile;
+import com.parse.ParseObject;
 
 import java.util.List;
 
@@ -79,11 +82,13 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
             bt_like = itemView.findViewById(R.id.bt_like) ;
         }
 
-        public void bind(Post post) {
+        public void bind(final Post post) {
             tvDescription.setText(post.getDescription());
             tvUsername.setText(post.getUser().getUsername());
             tvCategory.setText(post.getCategory());
             tvLike_number.setText(post.getLike().toString());
+
+
 
             tvTime.setText(post.getFormattedTimestamp());
 
@@ -92,6 +97,25 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
 
                 Glide.with(context).load(image.getUrl()).into(ivImage);
             }
+
+            bt_like.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    String temp = post.getLike().toString();
+                    int incLike = Integer.parseInt(temp)+1;
+                    String temp1 = String.valueOf(incLike);
+                    tvLike_number.setText(temp1);
+                    post.put("Likes",incLike);
+                    try {
+                        post.save();
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+
+                    Toast.makeText(context,"You clicked Like!", Toast.LENGTH_SHORT).show();
+                }
+            });
         }
 
 

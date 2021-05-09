@@ -15,6 +15,7 @@ public class Post extends ParseObject{
     public static final String KEY_USER = "author";
     public static final String KEY_CREATED_KEY = "createdAt";
     public static final String KEY_CATEGORY = "Category";
+    public static final String KEY_ID = "objectId";
 
     public static final String KEY_LIKE = "Likes";
 
@@ -54,6 +55,13 @@ public class Post extends ParseObject{
     public void setLike(Number like){
         put(KEY_LIKE,like);
     }
+
+
+    public String getId(){
+        return getString(KEY_ID);
+    }
+
+
 
     //no need to set time
     public String getFormattedTimestamp(){
