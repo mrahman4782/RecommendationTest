@@ -1,11 +1,13 @@
 package com.example.recommendationapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -69,6 +71,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
         private  TextView tvLike_number ;
         private ImageView ivImage ;
         private ImageButton bt_like ;
+        private LinearLayout container;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -78,8 +81,9 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
             tvTime = itemView.findViewById(R.id.tvTime) ;
             tvLike_number = itemView.findViewById(R.id.tvLike_number) ;
             ivImage = itemView.findViewById(R.id.ivImage)  ;
-
             bt_like = itemView.findViewById(R.id.bt_like) ;
+
+            container = itemView.findViewById(R.id.container);
         }
 
         public void bind(final Post post) {
@@ -90,13 +94,26 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
 
 
 
-            tvTime.setText(post.getFormattedTimestamp());
+            //tvTime.setText(post.getFormattedTimestamp());
 
-            ParseFile image = post.getImage();
+            final ParseFile image = post.getImage();
             if(image != null){
 
                 Glide.with(context).load(image.getUrl()).into(ivImage);
             }
+
+            ivImage.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(context, DetailActivity.class);
+                    i.putExtra("username", post.getUser().getUsername());
+                    i.putExtra("Category",post.getCategory());
+                    i.putExtra("Description",post.getDescription());
+                    i.putExtra("Image",image.getUrl());
+                    context.startActivity(i);
+
+                }
+            });
 
             bt_like.setOnClickListener(new View.OnClickListener() {
                 @Override

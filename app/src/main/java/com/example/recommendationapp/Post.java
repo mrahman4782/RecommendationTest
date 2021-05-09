@@ -64,9 +64,10 @@ public class Post extends ParseObject{
 
 
     //no need to set time
+    /*
     public String getFormattedTimestamp(){
         return TimeFormatter.getTimeDifference(KEY_CREATED_KEY);
-    }
+    }*/
 
 
 

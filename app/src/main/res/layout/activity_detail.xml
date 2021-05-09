@@ -10,7 +10,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/tvUsername"
+        android:id="@+id/tvUsername100"
         android:layout_width="match_parent"
         android:layout_height="32dp"
         android:fontFamily="serif"
@@ -22,15 +22,9 @@
         tools:layout_editor_absoluteY="9dp"
         tools:text="name" />
 
-    <ImageView
-        android:id="@+id/ivImage"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:scaleType="centerCrop"
-        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/tvDescription"
+        android:id="@+id/tvDescription100"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -45,41 +39,15 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/tvCategory"
+            android:id="@+id/tvCategory100"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="Category" />
 
-        <TextView
-            android:id="@+id/tvTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Time" />
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
-
-
-        <ImageButton
-            android:id="@+id/bt_like"
-            android:layout_width="112dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_baseline_thumb_up_24" />
-
-        <TextView
-            android:id="@+id/tvLike_number"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="Like Number" />
-    </LinearLayout>
 
 </LinearLayout>
 
