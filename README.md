@@ -38,7 +38,7 @@ In this app, users can view different posts made by other users. These posts inc
 - [x] Posts are sorted
 - [x] Users can like recommendations
 - [x] Users can tap on the picture to display the descriptions.
-- [ ] Users can visit recommended places.
+
 
 
 **Optional Nice-to-have Stories**
@@ -47,6 +47,7 @@ In this app, users can view different posts made by other users. These posts inc
 - [ ] Users can have a freindlist.
 - [ ] Users are able to add a new friend
 - [ ] Users are able to message their friends
+- [ ] Users can visit recommended places.
 
 
 ## Video Walkthrough
