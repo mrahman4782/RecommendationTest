@@ -31,21 +31,18 @@ In this app, users can view different posts made by other users. These posts inc
 - [x] Users can login/log out of their account.
 - [x] Users can view the recommendations from different users
 - [x] Users can add a recommendation, including images,descriptions and the tag.
-- [ ] Users can filter the recommendations based on the tag that each recommendation have.
 - [x] Users can view their profile and see the posts that they made
 - [x] Users are able to write a diary.
 - [x] Users can choose between different tabs including post,write a diary, search, and profile.
 - [x] User can pull to refresh.
-- [ ] Users can comment under other people's posts
-- [ ] Users can view other people's comment
 - [x] Posts are sorted
 - [x] Users can like recommendations
+- [ ] Users can tap on the picture to display the descriptions and zoom the image.
 
 
 **Optional Nice-to-have Stories**
 
 - [ ] Users can report innappropriate posts
-- [ ] Users can tap on the picture to display the descriptions and zoom the image.
 - [ ] Users can have a freindlist.
 - [ ] Users are able to add a new friend
 - [ ] Users are able to message their friends
