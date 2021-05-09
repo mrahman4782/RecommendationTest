@@ -37,7 +37,7 @@ In this app, users can view different posts made by other users. These posts inc
 - [x] User can pull to refresh.
 - [x] Posts are sorted
 - [x] Users can like recommendations
-- [x] Users can tap on the picture to display the descriptions and zoom the image.
+- [x] Users can tap on the picture to display the descriptions.
 
 
 **Optional Nice-to-have Stories**
