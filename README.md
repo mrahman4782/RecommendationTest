@@ -39,13 +39,13 @@ In this app, users can view different posts made by other users. These posts inc
 - [ ] Users can comment under other people's posts
 - [ ] Users can view other people's comment
 - [x] Posts are sorted
+- [x] Users can like recommendations
 
 
 **Optional Nice-to-have Stories**
 
 - [ ] Users can report innappropriate posts
 - [ ] Users can tap on the picture to display the descriptions and zoom the image.
-- [ ] Users can upvote and downvote recommendations
 - [ ] Users can have a freindlist.
 - [ ] Users are able to add a new friend
 - [ ] Users are able to message their friends
