@@ -9,77 +9,105 @@
     android:background="@drawable/narbackground">
 
     <TextView
-        android:layout_width="350dp"
-        android:layout_height="450dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="@drawable/backsquare"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
         />
+
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/topText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:fontFamily="@font/acme"
-        android:layout_marginTop="205dp"
 
-        android:text="Welcome!"
+        android:fontFamily="@font/acme"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="40dp"
+
+        android:text="Create an account"
         android:textSize="32sp"
         android:textColor="#FFFFFF"/>
 
-    <EditText
+    <TextView
+        android:id="@+id/secondText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+
+
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="170dp"
+
+        android:fontFamily="@font/cormorant_upright_light"
+        android:text="Sign-up to get started!"
+        android:textColor="#b2aaaa"
+        android:textSize="20sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
         android:id="@+id/username"
-        android:layout_width="270dp"
-        android:layout_height="40dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="358dp"
-        android:background="@drawable/edittextback"
-        android:maxLines="1"
         android:padding="10dp"
-        android:textColor="#323030"
-        android:textSize="14sp"
-        android:hint="Username"
-        android:fontFamily="@font/acme"
-        android:singleLine="true"
-        android:textColorHint="#323030"/>
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="288dp"
 
-    <EditText
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:hint="Enter your username"
+            android:fontFamily="@font/acme"
+            android:singleLine="true"
+            android:textSize="16sp"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
         android:id="@+id/password"
-        android:layout_width="270dp"
-        android:layout_height="40dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="418dp"
-        android:background="@drawable/edittextback"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:maxLines="1"
         android:padding="10dp"
-        android:textColor="#323030"
-        android:textSize="14sp"
-        android:fontFamily="@font/acme"
-        android:singleLine="true"
-        android:textColorHint="#323030"/>
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="358dp"
 
-    <EditText
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:hint="Enter your password"
+            android:fontFamily="@font/acme"
+            android:singleLine="true"
+            android:textSize="16sp"
+            android:inputType="textPassword"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
         android:id="@+id/email"
-        android:layout_width="270dp"
-        android:layout_height="40dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="298dp"
-        android:background="@drawable/edittextback"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:maxLines="1"
         android:padding="10dp"
-        android:textColor="#323030"
-        android:textSize="14sp"
-        android:fontFamily="@font/acme"
-        android:singleLine="true"
-        android:textColorHint="#323030"/>
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="218dp"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:hint="Enter your email"
+            android:fontFamily="@font/acme"
+            android:singleLine="true"
+            android:textSize="16sp"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
 
     <Button
         android:id="@+id/button"
@@ -87,7 +115,7 @@
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
-        android:layout_marginTop="493dp"
+        android:layout_marginTop="523dp"
         android:text="➢"
         android:textSize="18sp"
         android:background="@drawable/continuearrow"

@@ -9,14 +9,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputLayout;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private EditText username;
-    private EditText password;
+    private TextInputLayout username;
+    private TextInputLayout password;
     private Button submit;
 
     @Override
@@ -35,8 +36,8 @@ public class LoginActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String usernametxt = username.getText().toString();
-                String passwordtxt = password.getText().toString();
+                String usernametxt = username.getEditText().getText().toString();
+                String passwordtxt = password.getEditText().getText().toString();
                 loginUser(usernametxt, passwordtxt);
             }
         });
@@ -59,6 +60,7 @@ public class LoginActivity extends AppCompatActivity {
     private void goMainActivity() {
         Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
+        overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
         finish();
     }
 }

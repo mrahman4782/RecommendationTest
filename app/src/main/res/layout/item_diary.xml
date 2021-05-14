@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="205dp"
         android:text="TextView"
+        android:padding="5dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         tools:layout_editor_absoluteX="65dp"
         tools:layout_editor_absoluteY="73dp" />

@@ -9,15 +9,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputLayout;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 
 public class SignupActivity extends AppCompatActivity {
 
-    private EditText username;
-    private EditText password;
-    private EditText email;
+    private TextInputLayout username;
+    private TextInputLayout password;
+    private TextInputLayout email;
     private Button button;
 
     @Override
@@ -34,13 +35,13 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (!username.getText().toString().isEmpty() && !password.getText().toString().isEmpty()){
+                if (!username.getEditText().getText().toString().isEmpty() && !password.getEditText().getText().toString().isEmpty()){
 
                     ParseUser user = new ParseUser();
 
-                    user.setUsername(username.getText().toString());
-                    user.setPassword(password.getText().toString());
-                    user.setEmail(email.getText().toString());
+                    user.setUsername(username.getEditText().getText().toString());
+                    user.setPassword(password.getEditText().getText().toString());
+                    user.setEmail(email.getEditText().getText().toString());
                     
                     user.signUpInBackground(new SignUpCallback() {
                         @Override
@@ -67,6 +68,7 @@ public class SignupActivity extends AppCompatActivity {
     private void goMainActivity() {
         Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
+        overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
         finish();
     }
 }

@@ -12,7 +12,7 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="132dp"
-        app:srcCompat="@drawable/logo1" />
+        app:srcCompat="@drawable/logo4" />
 
     <EditText
         android:id="@+id/etDiary"
